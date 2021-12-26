@@ -1,4 +1,8 @@
-type Options = {
+export type Cookies = {
+  [name: string]: string
+}
+
+export type Options = {
   domain?: string
   expires?: Date | string
   httpOnly?: boolean
@@ -40,9 +44,7 @@ const serializers = {
   secure: bool,
 }
 
-export function parse(header: string): {
-  [name: string]: string
-} {
+export function parse(header: string): Cookies {
   const cookies = {}
   const parts = header
     .split(';')
