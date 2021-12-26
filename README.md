@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/sugarcookie?style=flat&colorA=4488FF&colorB=4488FF)](https://www.npmjs.com/package/sugarcookie) [![test coverage](https://img.shields.io/coveralls/github/sure-thing/sugarcookie?style=flat&colorA=223355&colorB=223355)](https://coveralls.io/github/sure-thing/sugarcookie?branch=main) [![npm bundle size](https://badgen.net/bundlephobia/min/sugarcookie?color=223355&labelColor=223355)](https://bundlephobia.com/result?p=sugarcookie)
 
-Sweet little HTTP cookie parser/serializer for Node.js and the browser.
+A sweet little HTTP cookie parser/serializer for Node.js and the browser.
 
 ```
 npm i sugarcookie
@@ -13,9 +13,9 @@ npm i sugarcookie
 ```javascript
 import { parse, serialize } from 'sugarcookie'
 
-parse('foo=bar; baz={"id":1}')
+parse('foo=bar')
 
-// { foo: 'bar', baz: { id: 1 } }
+// { foo: 'bar' }
 
 serialize('foo', 'bar', {
   expires: new Date(2021, 11, 25),
@@ -30,7 +30,7 @@ serialize('foo', 'bar', {
 **Note:** `sugarcookie` doesn't validate the values you pass in. Typescript will
 give you guidance, but ultimately ensuring your values match spec is up to you.
 
-### Options
+### Serializer options
 
 - `domain` - `string`
 - `expires` - `Date` or `string`
@@ -39,6 +39,14 @@ give you guidance, but ultimately ensuring your values match spec is up to you.
 - `path` - `string`
 - `sameSite` - `Strict`, `Lax`, or `None`
 - `secure` - `boolean`
+
+### Aliases
+
+Of course, you can also use the aliases.
+
+```javascript
+import { thaw, bake } from 'sugarcookie'
+```
 
 ### License
 

@@ -71,3 +71,6 @@ export function serialize(name: string, value: string, options: Options = {}) {
 
   return cookie.join('; ')
 }
+
+export const thaw = parse
+export const bake = serialize

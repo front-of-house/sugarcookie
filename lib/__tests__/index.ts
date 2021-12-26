@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { parse, serialize } from '../'
+import { parse, serialize, thaw, bake } from '../'
 
 test('parse - basic', async () => {
   const header = `foo=bar; baz=qux; int=0`
@@ -89,6 +89,11 @@ test('serialize - invalid key', () => {
   })
 
   assert.equal(cookie, 'foo=bar')
+})
+
+test('thaw, bake', () => {
+  assert.ok(thaw)
+  assert.ok(bake)
 })
 
 test.run()
