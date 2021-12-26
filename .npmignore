@@ -1,5 +1,8 @@
-/bench
+/.github
+/.husky
+/coverage
 /lib
+/scripts
 .c8rc
 .gitignore
 .prettierignore

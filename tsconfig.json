@@ -2,11 +2,9 @@
   "include": ["lib/index.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "lib": ["ES5", "dom"],
+    "lib": ["ES5"],
     "target": "ES5",
     "declaration": true,
-    "declarationDir": "./",
-    "jsxFactory": "h",
-    "jsxFragmentFactory": "h"
+    "declarationDir": "./"
   }
 }
