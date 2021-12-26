@@ -3,6 +3,7 @@
 /coverage
 /lib
 /scripts
+.pnpm-store
 .c8rc
 .gitignore
 .prettierignore
